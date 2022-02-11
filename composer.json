@@ -1,0 +1,32 @@
+{
+    "name": "wadeshuler/laravel-extended-commands",
+    "description": "Extends the Laravel commands for developers",
+    "keywords": ["laravel", "extended", "commands", "artisan", "make"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wade Shuler",
+            "email": "wadeshuler@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WadeShuler\\ExtendedCommands\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WadeShuler\\ExtendedCommands\\Providers\\ExtendedCommandsServiceProvider"
+            ]
+        }
+    }
+}
