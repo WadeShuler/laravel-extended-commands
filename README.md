@@ -8,7 +8,9 @@ With all of the helpful commands that Laravel comes out of the box with, there a
 
 Install as a dev dependency:
 
-`composer require wadeshuler/laravel-extended-commands --dev`
+```bash
+composer require wadeshuler/laravel-extended-commands --dev
+```
 
 ## Usage
 
