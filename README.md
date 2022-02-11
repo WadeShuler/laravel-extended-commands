@@ -65,6 +65,10 @@ If you don't want invokable actions, you can pass a `--handle` option which crea
 
 **Example:** `php artisan make:enum BlogPostStatus`
 
+**Enums require PHP version 8.1 or higher.**
+
+**Note:** The generated enum is just an example of a basic active/inactive status using an integer. It will cast the status as 1 or 0 in/out of the database and includes a label method for converting it to a string representation (ie: for a dropdown in your view). It can be any valid enum type, integer is just provided as a starting example.
+
 ### Make Service
 
 `php artisan make:service SomeService`
@@ -78,6 +82,12 @@ If you don't want invokable actions, you can pass a `--handle` option which crea
 `php artisan make:trait SomeTrait`
 
 **Example:** `php artisan make:trait BlogPost`
+
+## Custom Stubs
+
+You can override the stubs and use your own for file generation. Refer to the stubs included in this project's source code.
+
+It will first look in `/app/Console/stubs/` to see if the stub exists. If not, it will use the default ones provided by this package. So simply copy the stub from this package to `/app/Console/stubs/` and modify it to your liking.
 
 ## Requirements
 
