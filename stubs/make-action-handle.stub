@@ -14,5 +14,7 @@ class {{ class }}
     public function handle($request, $next)
     {
         // --
+
+        return $next($request);
     }
 }
