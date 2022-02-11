@@ -40,6 +40,19 @@ Delete all of the `*.log` files found in the `storage/logs` directory:
 
 **Example:** `php artisan make:action AddBlogPost`
 
+By default, this will generate "invokable actions", which allows you to typhint the action in your method and use it's parameter as a function/method. I find this the best use-case for actions and Laravel Fortify uses them mostly like this as well, which is why it's the default.
+
+```php
+public function store(Request $request, AddBlogPost $addBlogPostAction)
+{
+    $blogPost = $addBlogPostAction($request, $user);
+
+    // ...
+}
+```
+
+If you don't want invokable actions, you can pass a `--handle` option which creates a `handle()` method instead of the `__invoke()` magic method. This is ideal for when your actions are being used within Pipelines, which is why it automatically has the `$request` and `$next` params.
+
 ### Make Contract
 
 `php artisan make:contract SomeContract`
