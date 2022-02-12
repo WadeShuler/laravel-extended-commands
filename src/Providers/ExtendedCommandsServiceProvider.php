@@ -9,6 +9,7 @@ use WadeShuler\ExtendedCommands\Console\Commands\MakeContract;
 use WadeShuler\ExtendedCommands\Console\Commands\MakeEnum;
 use WadeShuler\ExtendedCommands\Console\Commands\MakeService;
 use WadeShuler\ExtendedCommands\Console\Commands\MakeTrait;
+use WadeShuler\ExtendedCommands\Console\Commands\MakeView;
 
 class ExtendedCommandsServiceProvider extends ServiceProvider
 {
@@ -37,6 +38,7 @@ class ExtendedCommandsServiceProvider extends ServiceProvider
                 MakeEnum::class,
                 MakeService::class,
                 MakeTrait::class,
+                MakeView::class,
             ]);
         }
     }
