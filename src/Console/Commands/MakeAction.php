@@ -33,7 +33,7 @@ class MakeAction extends GeneratorCommand
      *
      * @var string
      */
-    protected $type = 'Actions';
+    protected $type = 'Action';
 
     /**
      * Get the stub file for the generator.
